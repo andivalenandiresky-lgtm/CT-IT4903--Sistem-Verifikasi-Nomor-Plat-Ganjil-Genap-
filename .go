@@ -7,6 +7,7 @@ import "fmt"
 func main() {
 
 	fmt.Println(" >⩊< SELAMAT DATANG DI PROGRAM SISTEM VERIFIKASI PLAT >⩊<")
+	fmt.Println(" ")
 
 	ulangProgram := true
 
