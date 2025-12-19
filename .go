@@ -45,7 +45,6 @@ func main() {
 		if validHari == false {
 			fmt.Println("Tanggal tidak valid")
 		} else {
-
 			fmt.Print("Masukkan bulan (1-12): ")
 			fmt.Scanln(&bulan)
 
