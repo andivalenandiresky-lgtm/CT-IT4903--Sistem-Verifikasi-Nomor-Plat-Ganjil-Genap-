@@ -23,7 +23,6 @@ func main() {
 
 		for validTanggal == false {
 
-			// ===== INPUT & VALIDASI HARI =====
 			fmt.Print("Masukkan tanggal (1-31): ")
 			fmt.Scanln(&hari)
 
@@ -56,8 +55,7 @@ func main() {
 			if validHari == false {
 				fmt.Println("Tanggal tidak valid ( •̀ ᴖ •́ )")
 			} else {
-
-				// ===== INPUT & VALIDASI BULAN =====
+				
 				fmt.Print("Masukkan bulan (1-12): ")
 				fmt.Scanln(&bulan)
 
@@ -87,7 +85,6 @@ func main() {
 					fmt.Println("Bulan tidak valid ( •̀ ᴖ •́ )")
 				} else {
 
-					// ===== INPUT & VALIDASI TAHUN =====
 					fmt.Print("Masukkan tahun: ")
 					fmt.Scanln(&tahun)
 
