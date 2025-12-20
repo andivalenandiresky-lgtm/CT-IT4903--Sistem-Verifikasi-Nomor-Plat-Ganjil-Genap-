@@ -56,7 +56,7 @@ func main() {
 			if validHari == false {
 				fmt.Println("Tanggal tidak valid ( •̀ ᴖ •́ )")
 			} else {
-				
+
 				fmt.Print("Masukkan bulan (1-12): ")
 				fmt.Scanln(&bulan)
 
@@ -86,35 +86,44 @@ func main() {
 					fmt.Println("Bulan tidak valid ( •̀ ᴖ •́ )")
 				} else {
 
-					fmt.Print("Masukkan tahun: ")
-					fmt.Scanln(&tahun)
+					validTahun := false
 
-					validTahun := true
-					i = 0
+					for validTahun == false {
 
-					for i < len(tahun) {
-						if tahun[i] < '0' || tahun[i] > '9' {
+						fmt.Print("Masukkan tahun: ")
+						fmt.Scanln(&tahun)
+
+						validTahun = true
+						i = 0
+
+						if len(tahun) == 0 {
 							validTahun = false
 						}
-						i = i + 1
-					}
 
-					if validTahun == false {
-						fmt.Println("Tahun tidak valid ( •̀ ᴖ •́ )")
-					} else {
-
-						angkaTahun = 0
-						i = 0
 						for i < len(tahun) {
-							angkaTahun = angkaTahun*10 + int(tahun[i]-'0')
+							if tahun[i] < '0' || tahun[i] > '9' {
+								validTahun = false
+							}
 							i = i + 1
 						}
 
-						validTanggal = true
+						if validTahun == false {
+							fmt.Println("Tahun tidak valid ( •̀ ᴖ •́ )")
+						}
 					}
+
+					angkaTahun = 0
+					i = 0
+					for i < len(tahun) {
+						angkaTahun = angkaTahun*10 + int(tahun[i]-'0')
+						i = i + 1
+					}
+
+					validTanggal = true
 				}
 			}
 		}
+
 		h := angkaHari
 		m := angkaBulan
 		y := angkaTahun
@@ -143,7 +152,7 @@ func main() {
 		if namaHari == "Sabtu" || namaHari == "Minggu" {
 			fmt.Println("Tidak berlaku ganjil genap (˶ > ₃ < ˶)")
 		} else {
-			
+
 			validJenis := false
 			jenisKendaraan := ""
 
@@ -199,7 +208,7 @@ func main() {
 				}
 			}
 		}
-		
+
 		validJawab := false
 		var jawab string
 
